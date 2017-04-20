@@ -1,0 +1,9 @@
+<br>
+<div class="row">
+  <input #searchBox (keyup)="search(searchBox.value)" type="text" class="form-control" placeholder="Search for...">
+  <ul class="list-group">
+    <li class="list-group-item" 
+      *ngFor="let hero of heroes | async" 
+      (click)="gotoDetail(hero)">{{hero.name}}</li>
+  </ul>
+</div>

@@ -1,0 +1,17 @@
+<div class="page-header container">
+  <h1>{{title}}</h1>
+  <nav>
+    <a routerLink="/dashboard" class="btn btn-primary">dashboard</a>
+    <a routerLink="/heroes" class="btn btn-primary">heroes</a>
+  </nav>
+  <div class="container">
+    <app-hero-search></app-hero-search>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<!--<h2>{{hero.name}} details!</h2>
+<div><label>id:</label>{{hero.id}}</div>
+<div>
+  <label>name: </label>
+  <input [(ngModel)]="hero.name" placeholder="name">
+</div>-->

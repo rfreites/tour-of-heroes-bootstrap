@@ -1,0 +1,31 @@
+<div class="row">
+  <br>
+  <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+  <br>
+  <div class="input-group">
+    <input class="form-control" placeholder="Hero Name" #heroName />
+    <span class="input-group-btn">
+      <button class="btn btn-success" (click)="add(heroName.value); heroName.value=''">
+        Add
+      </button>
+    </span>
+  </div>
+  <br>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let hero of heroes"  [class.list-group-item-success]="hero == selectedHero" (click)="onSelect(hero)">
+      <div *ngIf="hero == selectedHero">
+        <div>{{selectedHero.name}} details!</div>
+        <div><label>id: </label>{{selectedHero.id}}</div>
+        <div>
+          <label>name: </label>
+          <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+          <a (click)="gotoDetail()" class="btn btn-success">Go to Detail</a>
+          <button class="btn btn-warning" (click)="delete(hero); $event.stopPropagation()">Delete</button>
+        </div>
+      </div>
+      <div *ngIf="hero != selectedHero">
+        <span class="badge">{{hero.id}}</span> {{hero.name | uppercase}}
+      </div> 
+    </li>
+  </ul>
+</div>

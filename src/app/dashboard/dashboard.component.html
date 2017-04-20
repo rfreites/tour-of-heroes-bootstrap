@@ -1,0 +1,6 @@
+<div class="row">
+  <h3>Top Heroes</h3>
+</div>
+<div class="col-xs-6 col-md-3 btn-group dropup" *ngFor="let hero of heroes">
+  <a class="btn" [routerLink]="['/detail', hero.id]">{{hero.name | uppercase}}</a>
+</div>
