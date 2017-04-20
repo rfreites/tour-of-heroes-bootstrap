@@ -1,0 +1,12 @@
+<div *ngIf="hero">
+  <br>
+  <div class="panel panel-default">
+    <div class="panel-heading" style="color:black;">Hero Selected</div>
+    <div class="panel-body">
+      <span class="badge">{{hero.id}}</span> {{hero.name | uppercase}}
+      <a (click)="goBack()" class="btn btn-default">Back</a>
+      <button class="btn btn-success" (click)="save()">Save</button>
+      <button class="btn btn-warning" (click)="delete(hero);">Delete</button>
+    </div>
+  </div>
+</div> 
