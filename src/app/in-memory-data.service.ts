@@ -1,4 +1,4 @@
-import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryWebApiModule {
   createDb() {
     let heroes = [

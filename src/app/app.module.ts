@@ -11,7 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { RoutingModule } from './routing/routing.module';
 // Imports for loading & configuring the in-memory web api
-import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 
